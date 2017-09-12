@@ -1,0 +1,7 @@
+<h1>Guardians#index</h1>
+<%= link_to 'Add a Guardian', new_guardian_path %>
+<br>
+<% @guardians.each do |guardian| %>
+  <%= link_to guardian.name, guardian_path(guardian) %>
+  <hr>
+<% end %>

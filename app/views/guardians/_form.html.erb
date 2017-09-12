@@ -1,0 +1,27 @@
+<h1>Guardians#new</h1>
+<div class="ui container center aligned">
+  <h1><%= @guardian.id ? 'Edit Guardian' : 'Create Guardian' %></h1>
+
+    <div class="ui form">
+      <%= form_for @guardian do |f| %>
+        <%= f.label :name, class: "ui left aligned container" %>
+        <%= f.text_field :name, required: true, autofocus: true %>
+
+        <%= f.label :class, class: "ui left aligned container" %>
+        <%= f.text_field :klass, required: true %>
+
+        <%= f.label :subclass, class: "ui left aligned container" %>
+        <%= f.text_field :subclass, required: true %>
+
+        <%= f.label :light, class: "ui left aligned container" %>
+        <%= f.text_field :light, required: true %>
+
+        <%= f.label :race, class: "ui left aligned container" %>
+        <%= f.text_field :race, required: true %>
+
+        <%= f.label :gender, class: "ui left aligned container" %>
+        <%= f.text_field :gender, required: true %>
+        <%= f.submit nil, class: "ui button" %>
+      <% end %>
+    </div>
+</div>
